@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "PERSONAJE.h"
 #include "arma.h"
+#include "Guerrero.h"
+#include "Mago.h"
 
 int main(void)
 {
@@ -17,6 +19,15 @@ int main(void)
 	printf("el arma es un %s\n", get_wepon(florete));
 
 	Arma_destruir(florete);
+
+	Guerrero* Zoro;
+	Zoro = Guerrero_crear("Zoro", 10, 1, 2);
+	
+	Mago* Pepe;
+	Pepe = Mago_crear("pepe", 13, 2, 13);
+
+	
+
 
 	
 }

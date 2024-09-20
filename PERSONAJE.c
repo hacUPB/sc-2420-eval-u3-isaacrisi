@@ -1,4 +1,4 @@
-#include "Personaje.h"
+#include "PERSONAJE.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

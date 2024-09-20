@@ -24,12 +24,24 @@
     <ClCompile Include="arma.c">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Guerrero.c">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Mago.c">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Mago.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PERSONAJE.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="arma.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Guerrero.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

@@ -128,11 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="arma.c" />
+    <ClCompile Include="Guerrero.c" />
+    <ClCompile Include="Mago.c" />
+    <ClCompile Include="Mago.h" />
     <ClCompile Include="main.c" />
     <ClCompile Include="PERSONAJE.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arma.h" />
+    <ClInclude Include="Guerrero.h" />
     <ClInclude Include="PERSONAJE.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

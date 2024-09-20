@@ -19,7 +19,7 @@ void Arma_destruir(Arma* this) {
         free(this);
     }
 }
-static char* get_wepon(Arma* this)
+char* get_wepon(Arma* this)
 {
     return this->nombre;
 }

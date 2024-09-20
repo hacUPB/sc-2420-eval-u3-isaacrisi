@@ -9,7 +9,7 @@ typedef struct Arma {
 
 Arma* Arma_crear( const char* nombre, int damage, int alcance);
 void Arma_destruir(Arma* this);
-static char* get_wepon(Arma* this);
+char* get_wepon(Arma* this);
 void mostrar_info(char* nombre, int damage, int alcance);
 
 #endif 
