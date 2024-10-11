@@ -9,4 +9,5 @@ void inicializarObstacle(Obstacle* o, int width, int height, int xpos, int ypos,
 
 int mainO();
 
+
 #endif
