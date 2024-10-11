@@ -12,6 +12,8 @@ confusion-snapper-025.notion.site/Sistemas-Computacionales-d1806d0b626347f4aa90a
 
 # Documentacion 
 ![DiagramaSC](https://github.com/user-attachments/assets/9753cc92-6f35-4c77-a3a1-bfd1730ce6cd)
+
+
 diagrama de clases en su version inicial.
 esta version se tuvo que modificar a medida que se realizaba el codgio por la siguiente se eliminaron dos clases por falta de tiempo y ciertos metodos se aplicaron de forma distinta.
 
