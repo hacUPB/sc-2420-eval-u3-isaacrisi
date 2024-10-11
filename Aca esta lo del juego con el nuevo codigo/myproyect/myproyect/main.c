@@ -105,9 +105,7 @@ void process_input()
 }
 void setup()
 {
-	
-
-
+	p.isAlive = TRUE;
 
 }
 void update()
@@ -123,8 +121,8 @@ void update()
 	float delta_time = (SDL_GetTicks() - last_frame_time) / 1000.0f;
 
 	last_frame_time = SDL_GetTicks();
-	p.personaje.xpos += p.personaje.velx * delta_time;
-	p.personaje.ypos += p.personaje.vely * delta_time;
+	p.super.xpos += p.super.velx * delta_time;
+	p.super.ypos += p.super.vely * delta_time;
 	//rect.width += 1;
 	//rect.height += 1;
 	l.lvl.xpos += l.lvl.velx * delta_time;
@@ -175,16 +173,23 @@ void update()
 	g++;
 	b++;
 	//colisiones entre figurar
-	if (p.personaje.ypos == 300)
+	if (p.super.ypos == 300)
 	{
-		p.personaje.vely = 0;
+		p.super.vely = 0;
 	}
 	// Verificar colisi�n entre el cuadrado (rect) y el suelo (rect2)
-	if (p.personaje.ypos + p.personaje.height >= l.lvl.ypos &&       // El borde inferior del cuadrado toca el borde superior del suelo
-		p.personaje.xpos + p.personaje.width >= l.lvl.xpos &&        // El borde derecho del cuadrado est� dentro del suelo
-		p.personaje.xpos <= l.lvl.xpos + l.lvl.width) {       // El borde izquierdo del cuadrado est� dentro del suelo
-		p.personaje.ypos = l.lvl.ypos - p.personaje.height;          // Ajusta la posici�n del cuadrado para que no atraviese el suelo
-		p.personaje.vely = 0;                           // Detiene el movimiento vertical (ca�da) del cuadrado
+	if (p.super.ypos + p.super.height >= l.lvl.ypos &&       // El borde inferior del cuadrado toca el borde superior del suelo
+		p.super.xpos + p.super.width >= l.lvl.xpos &&        // El borde derecho del cuadrado est� dentro del suelo
+		p.super.xpos <= l.lvl.xpos + l.lvl.width) {       // El borde izquierdo del cuadrado est� dentro del suelo
+		p.super.ypos = l.lvl.ypos - p.super.height;          // Ajusta la posici�n del cuadrado para que no atraviese el suelo
+		p.super.vely = 0;                           // Detiene el movimiento vertical (ca�da) del cuadrado
+	}
+
+	CheckIfIsAlive(&o, &p);
+
+	if (p.isAlive == FALSE)
+	{
+		game_is_running = FALSE;
 	}
 
 }
@@ -195,10 +200,10 @@ void render()
 	SDL_RenderClear(renderer);
 
 	SDL_Rect ball_rect = {
-		(int)p.personaje.xpos,
-		(int)p.personaje.ypos,
-		(int)p.personaje.width,
-		(int)p.personaje.height
+		(int)p.super.xpos,
+		(int)p.super.ypos,
+		(int)p.super.width,
+		(int)p.super.height
 	};
 	SDL_Rect ball_rect2 = {
 		(int)l.lvl.xpos,
